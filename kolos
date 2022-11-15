@@ -1,0 +1,110 @@
+//Sortowanie
+
+            double liczba1 = double.Parse(textBoxTekst1.Text);
+            double liczba2 = double.Parse(textBoxTekst2.Text);
+            double liczba3 = double.Parse(textBoxTekst3.Text);
+            string wynik = "";
+
+            List<double> sortowanie = new List<double>();
+
+            sortowanie.Add(liczba1);
+            sortowanie.Add(liczba2);
+            sortowanie.Add(liczba3);
+
+            sortowanie.Sort();
+            sortowanie.Reverse();
+
+            for(int i=0; i<3; i++)
+            {
+                wynik += sortowanie[i] + " ";
+            }
+
+            MessageBox.Show(wynik);
+           
+//Kalkulator
+
+        private void buttonDodawanie_Click(object sender, EventArgs e)
+        {
+            double liczba1 = double.Parse(textBoxLiczba1.Text);
+            double liczba2 = double.Parse(textBoxLiczba2.Text);
+
+            double wynik = liczba1 + liczba2;
+
+            textBoxWynik.Text = wynik.ToString();
+        }
+
+        private void buttonOdejmowanie_Click(object sender, EventArgs e)
+        {
+            double liczba1 = double.Parse(textBoxLiczba1.Text);
+            double liczba2 = double.Parse(textBoxLiczba2.Text);
+
+            double wynik = liczba1 - liczba2;
+
+            textBoxWynik.Text = wynik.ToString();
+        }
+
+        private void buttonMnozenie_Click(object sender, EventArgs e)
+        {
+            double liczba1 = double.Parse(textBoxLiczba1.Text);
+            double liczba2 = double.Parse(textBoxLiczba2.Text);
+
+            double wynik = liczba1 * liczba2;
+
+            textBoxWynik.Text = wynik.ToString();
+        }
+
+        private void buttonDzielenie_Click(object sender, EventArgs e)
+        {
+            double liczba1 = double.Parse(textBoxLiczba1.Text);
+            double liczba2 = double.Parse(textBoxLiczba2.Text);
+
+            double wynik = liczba1 / liczba2;
+
+            if (liczba2 == 0)
+            {
+                textBoxWynik.Text = "Nie dziel przez 0";
+            }
+            else
+            {
+                textBoxWynik.Text = wynik.ToString();
+            }
+
+        }
+        
+//Zakolakowe
+
+            int liczba = int.Parse(textBoxZakolakowe.Text);
+            string wynik = "";
+            for (int i = 0; i < liczba; i++)
+            {
+                wynik += liczba + " ";
+            }
+
+            MessageBox.Show(wynik);
+
+//Kolorowanie
+            
+            textBoxNAZWA.color = color.KOLOR
+            
+            
+//Silnia
+
+            int silnia;
+
+             int LiczSilnie(int x)
+            {
+                int wynik = 1;
+
+                for (int i = x; i > 0; i--)
+                {
+                    wynik *= x;
+                    x--;
+                }
+
+                return wynik;
+            }
+            silnia = int.Parse(textBoxWpiszSilnie.Text);
+            
+            MessageBox.Show(LiczSilnie(silnia).ToString());
+            
+            
